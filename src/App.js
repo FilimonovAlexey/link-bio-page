@@ -12,6 +12,7 @@ import {
   List,
   HStack
 } from '@chakra-ui/react';
+import {AiFillCode} from 'react-icons/ai'
 
 function App() {
   return (
@@ -34,7 +35,15 @@ function App() {
                   w="15em" 
                   h="3em" 
                   borderRadius="lg" 
-                  bgColor="rgba(255,255,255,0.7)">
+                  bgColor="rgba(255,255,255,0.7)"
+                  p="1em"
+                  >
+                    <Text 
+                      as={AiFillCode} 
+                      color="gray.900" 
+                      fontSize={30} 
+                      marginRight="auto"
+                    />
                     <Text color="gray.900" fontSize={20} fontWeight="bold">Мой сайт</Text>
                 </HStack>
               </a>
