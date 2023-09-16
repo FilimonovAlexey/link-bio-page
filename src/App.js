@@ -10,8 +10,12 @@ import {
   List,
   HStack
 } from '@chakra-ui/react';
+
+//Подключение иконок
 import {AiFillCode, AiFillGithub} from 'react-icons/ai';
 import { FaTelegram } from "react-icons/fa"
+
+//Подключение анимаций
 import { motion } from 'framer-motion';
 
 function App() {
