@@ -86,7 +86,11 @@ function App() {
                     <Text 
                       color="gray.900"
                       fontSize={20} 
-                      fontWeight="bold">
+                      fontWeight="bold"
+                      margin="auto"
+                      p="1em"
+                      marginY="1em"
+                    >
                         {link.text}
                     </Text>
                   </HStack>
