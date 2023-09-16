@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import {AiFillCode, AiFillGithub} from 'react-icons/ai';
 import { FaTelegram } from "react-icons/fa"
+import { motion } from 'framer-motion';
 
 function App() {
 
@@ -23,6 +24,16 @@ function App() {
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Telegram група"},
   ]
+
+  const parentContainer = {
+    hidden: {opacity: 0},
+    show: {opacity: 1, transition: {staggerChildren: 0.5}},
+  }
+
+  const chieldElement = {
+    hidden: {opacity: 0, x: "-50px"},
+    show: {opacity: 1, x: "0px"}
+  }
 
   return (
     <ChakraProvider theme={theme}>
@@ -38,7 +49,7 @@ function App() {
             <Text as="h1" fontSize={30} fontWeight="bold">
               Техноманьяк
             </Text>
-            <List>
+            <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
               {links.map(link => (
                 <a href={link.url}>
                   <HStack 
@@ -48,6 +59,8 @@ function App() {
                     bgColor="rgba(255,255,255,0.7)"
                     p="1em"
                     marginY="1em"
+                    as={motion.div}
+                    variants={chieldElement}
                   >
                     <Text 
                       as={link.icon} 
