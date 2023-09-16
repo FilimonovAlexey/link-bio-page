@@ -27,7 +27,7 @@ function App() {
 
   const parentContainer = {
     hidden: {opacity: 0},
-    show: {opacity: 1, transition: {staggerChildren: 0.5}},
+    show: {opacity: 1, transition: {staggerChildren: 0.15}},
   }
 
   const chieldElement = {
@@ -39,14 +39,25 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, gray.900, blue.200)">
-          <VStack>
+          <VStack marginTop="3em">
             <Image 
               src="./Logo512.png"
               w="10em"
               borderRadius="50%"
               boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
+              as={motion.img}
+              initial={{scale: 0}}
+              animate={{scale: 1}}
+              transition="linear 0.1s"
             />
-            <Text as="h1" fontSize={30} fontWeight="bold">
+            <Text
+              fontSize={30} 
+              fontWeight="bold"
+              as={motion.h1}
+              initial={{x: "-50px"}}
+              animate={{x: "0px"}}
+              transition="linear 0.1s"
+            >
               Техноманьяк
             </Text>
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
@@ -61,6 +72,8 @@ function App() {
                     marginY="1em"
                     as={motion.div}
                     variants={chieldElement}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
                   >
                     <Text 
                       as={link.icon} 
