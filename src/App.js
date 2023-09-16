@@ -40,10 +40,10 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3} bgGradient="linear(to-b, gray.900, blue.200)">
+        <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
           <VStack marginTop="3em">
             <Image 
-              src="./Logo512.png"
+              src="./Logo.png"
               w="10em"
               borderRadius="50%"
               boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
