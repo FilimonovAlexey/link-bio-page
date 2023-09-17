@@ -12,8 +12,8 @@ import {
 } from '@chakra-ui/react';
 
 //Подключение иконок
-import {AiFillCode, AiFillGithub} from 'react-icons/ai';
-import { FaTelegram } from "react-icons/fa"
+import {AiFillCode, AiFillGithub, AiFillCheckCircle} from 'react-icons/ai';
+import {FaTelegram} from "react-icons/fa"
 
 //Подключение анимаций
 import { motion } from 'framer-motion';
@@ -52,16 +52,26 @@ function App() {
               animate={{scale: 1}}
               transition="linear 0.1s"
             />
-            <Text
-              fontSize={30} 
-              fontWeight="bold"
-              as={motion.h1}
+            <HStack
+              as={motion.div}
               initial={{x: "-50px"}}
               animate={{x: "0px"}}
               transition="linear 0.1s"
+            
             >
-              Техноманьяк
-            </Text>
+              <Text 
+                as={AiFillCheckCircle} 
+                color="rgba(3, 177, 252)" 
+                fontSize={30} 
+                marginRight="auto"
+              />
+              <Text
+                fontSize={30} 
+                fontWeight="bold"
+              >
+                Техноманьяк
+              </Text>
+            </HStack>
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
               {links.map(link => (
                 <a href={link.url}>
