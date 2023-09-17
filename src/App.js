@@ -34,6 +34,7 @@ function App() {
   //Название страницы
   const info = {
     name: "@Техноманьяк",
+    gadjets: "Мои гаджеты",
   }
 
   const parentContainer = {
@@ -98,8 +99,8 @@ function App() {
                 transition="linear 0.1s"
               >
                 👨🏻‍💻 Начинающий <b>Frontend разработчик.</b> <br /> 
-                🎥 Владелец <b>YouTube канала: Техноманьяк</b> <br /> 
-                📲 Тут ты найдешь все мои ссылки в социальных сетях!"
+                🎥 Владелец <b>YouTube канала: Техноманьяк.</b> <br /> 
+                📲 Тут ты найдешь все мои ссылки в социальных сетях!
               </Text>
             </HStack>
             {/* Блок с ссылками */}
@@ -147,14 +148,13 @@ function App() {
               boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
               bgColor="rgba(255,255,255,0.7)"
               p="1em"
-              my="1em"
+              marginY="1em"
               as={motion.div}
               variants={chieldElement}
               whileHover={{scale: 1.1}}
               whileTap={{scale: 0.9}}
             >
               <Link to="/mydevice" style={{ textDecoration: 'none' }}>
-                <Flex align="center" justifyContent="center">
                   <Text 
                     as={AiFillCode} 
                     color="gray.900" 
@@ -165,12 +165,10 @@ function App() {
                     fontSize={20} 
                     fontWeight="bold"
                   >
-                    Мои гаджеты
+                    {info.gadjets}
                   </Text>
-                </Flex>
               </Link>
             </HStack>
-
           </VStack>
         </Grid>
       </Box>
