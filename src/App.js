@@ -45,7 +45,7 @@ function App() {
             {/* логотип */}
             <Image 
               src="./Logo.png"
-              w="10em"
+              w="6em"
               borderRadius="50%"
               boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
               as={motion.img}
@@ -72,6 +72,24 @@ function App() {
                 fontWeight="bold"
               >
                 Техноманьяк
+              </Text>
+            </HStack>
+            {/* Блок с информацией */}
+            <HStack>
+              <Text
+                color="gray.900"
+                fontSize={20}
+                w="30em" 
+                h="6em"
+                as={motion.div}
+                initial={{x: "-50px"}}
+                animate={{x: "0px"}}
+                transition="linear 0.1s"
+              >
+                Меня зовут Алексей и я начинающий Frontend разработчик.
+                Владелец YouTube канала: Техноманьяк, где я рассказываю о 
+                Программировании и Технологиях. На этой странице собраны все
+                мои социальные сети и не только!
               </Text>
             </HStack>
             {/* Блок с ссылками */}
