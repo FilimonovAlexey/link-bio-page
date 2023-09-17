@@ -8,8 +8,10 @@ import {
   theme,
   Image,
   List,
-  HStack
+  HStack,
+  Flex,
 } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
 
 //Подключение иконок
 import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube} from 'react-icons/ai';
@@ -50,16 +52,18 @@ function App() {
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
           <VStack marginTop="2em">
             {/* логотип */}
-            <Image 
-              src="./Logo.png"
-              w="6em"
-              borderRadius="50%"
-              boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
-              as={motion.img}
-              initial={{scale: 0}}
-              animate={{scale: 1}}
-              transition="linear 0.1s"
-            />
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Image 
+                src="./Logo.png"
+                w="6em"
+                borderRadius="50%"
+                boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
+                as={motion.img}
+                initial={{scale: 0}}
+                animate={{scale: 1}}
+                transition="linear 0.1s"
+              />
+            </Link>
             {/* Блок с названием */}
             <HStack
               as={motion.div}
@@ -135,6 +139,38 @@ function App() {
                 </a>
               ))}
             </List>
+            {/* Страница с гаджетами */}
+            <HStack
+              w="25em" 
+              h="3em" 
+              borderRadius="lg"
+              boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
+              bgColor="rgba(255,255,255,0.7)"
+              p="1em"
+              my="1em"
+              as={motion.div}
+              variants={chieldElement}
+              whileHover={{scale: 1.1}}
+              whileTap={{scale: 0.9}}
+            >
+              <Link to="/mydevice" style={{ textDecoration: 'none' }}>
+                <Flex align="center" justifyContent="center">
+                  <Text 
+                    as={AiFillCode} 
+                    color="gray.900" 
+                    fontSize={30} 
+                  />
+                  <Text
+                    color="gray.900"
+                    fontSize={20} 
+                    fontWeight="bold"
+                  >
+                    Мои гаджеты
+                  </Text>
+                </Flex>
+              </Link>
+            </HStack>
+
           </VStack>
         </Grid>
       </Box>
