@@ -42,6 +42,7 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
           <VStack marginTop="3em">
+            {/* логотип */}
             <Image 
               src="./Logo.png"
               w="10em"
@@ -52,6 +53,7 @@ function App() {
               animate={{scale: 1}}
               transition="linear 0.1s"
             />
+            {/* Блок с названием */}
             <HStack
               as={motion.div}
               initial={{x: "-50px"}}
@@ -72,6 +74,7 @@ function App() {
                 Техноманьяк
               </Text>
             </HStack>
+            {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
               {links.map(link => (
                 <a href={link.url}>
