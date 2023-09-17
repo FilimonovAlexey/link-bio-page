@@ -41,7 +41,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
-          <VStack marginTop="3em">
+          <VStack marginTop="2em">
             {/* логотип */}
             <Image 
               src="./Logo.png"
@@ -86,9 +86,9 @@ function App() {
                 animate={{x: "0px"}}
                 transition="linear 0.1s"
               >
-                Меня зовут Алексей и я начинающий Frontend разработчик.
-                Владелец YouTube канала: Техноманьяк, где я рассказываю о 
-                Программировании и Технологиях. На этой странице собраны все
+                Меня зовут Алексей и я начинающий <b>Frontend разработчик.</b> <br />
+                Владелец <b>YouTube канала: Техноманьяк</b>, где я рассказываю о 
+                <b> Программировании и Технологиях.</b> На этой странице собраны все
                 мои социальные сети и не только!
               </Text>
             </HStack>
