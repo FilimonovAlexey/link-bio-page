@@ -61,18 +61,18 @@ function App() {
               transition="linear 0.1s"
             
             >
-              <Text 
-                as={AiFillCheckCircle} 
-                color="rgba(3, 177, 252)" 
-                fontSize={30} 
-                marginRight="auto"
-              />
               <Text
                 fontSize={30} 
                 fontWeight="bold"
               >
                 Техноманьяк
               </Text>
+              <Text 
+                as={AiFillCheckCircle} 
+                color="rgba(3, 177, 252)" 
+                fontSize={30} 
+                marginRight="auto"
+              />
             </HStack>
             {/* Блок с информацией */}
             <HStack>
@@ -99,7 +99,8 @@ function App() {
                   <HStack 
                     w="15em" 
                     h="3em" 
-                    borderRadius="lg" 
+                    borderRadius="lg"
+                    boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor="rgba(255,255,255,0.7)"
                     p="1em"
                     marginY="1em"
