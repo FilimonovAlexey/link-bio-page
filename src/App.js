@@ -29,6 +29,11 @@ function App() {
     {url: "https://boosty.to/tehnomaniak", icon: FaMoneyBill, text: "Поддержать канал"},
   ]
 
+  //Название страницы
+  const info = {
+    name: "@Техноманьяк",
+  }
+
   const parentContainer = {
     hidden: {opacity: 0},
     show: {opacity: 1, transition: {staggerChildren: 0.15}},
@@ -67,7 +72,7 @@ function App() {
                 fontSize={30} 
                 fontWeight="bold"
               >
-                Техноманьяк
+                {info.name}
               </Text>
               <Text 
                 as={AiFillCheckCircle} 
@@ -88,9 +93,9 @@ function App() {
                 animate={{x: "0px"}}
                 transition="linear 0.1s"
               >
-                👨🏻‍💻 Начинающий <b>Frontend разработчик.</b> <br />
-                🎥 Владелец <b>YouTube канала: Техноманьяк</b> <br />
-                📲 Тут ты найдешь все мои ссылки в социальных сетях!
+                👨🏻‍💻 Начинающий <b>Frontend разработчик.</b> <br /> 
+                🎥 Владелец <b>YouTube канала: Техноманьяк</b> <br /> 
+                📲 Тут ты найдешь все мои ссылки в социальных сетях!"
               </Text>
             </HStack>
             {/* Блок с ссылками */}
