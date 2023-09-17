@@ -8,14 +8,13 @@ import {
   theme,
   Image,
   List,
-  HStack,
-  Flex,
+  HStack
 } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 
 //Подключение иконок
-import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube} from 'react-icons/ai';
-import {FaMoneyBill, FaTelegram} from "react-icons/fa"
+import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube, AiFillDollarCircle, AiFillCustomerService} from 'react-icons/ai';
+import {FaTelegram} from "react-icons/fa"
 
 //Подключение анимаций
 import { motion } from 'framer-motion';
@@ -28,13 +27,13 @@ function App() {
     {url: "https://filimonov-blog.ru/", icon: AiFillCode, text: "Мой Сайт"},
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Группа Telegram"},
-    {url: "https://boosty.to/tehnomaniak", icon: FaMoneyBill, text: "Поддержать канал"},
+    {url: "https://boosty.to/tehnomaniak", icon: AiFillDollarCircle, text: "Поддержать канал"},
+    {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
   ]
 
   //Название страницы
   const info = {
     name: "@Техноманьяк",
-    gadjets: "Мои гаджеты",
   }
 
   const parentContainer = {
@@ -52,6 +51,7 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
           <VStack marginTop="2em">
+
             {/* логотип */}
             <Link to="/" style={{ textDecoration: 'none' }}>
               <Image 
@@ -65,13 +65,13 @@ function App() {
                 transition="linear 0.1s"
               />
             </Link>
+
             {/* Блок с названием */}
             <HStack
               as={motion.div}
               initial={{x: "-50px"}}
               animate={{x: "0px"}}
               transition="linear 0.1s"
-            
             >
               <Text
                 fontSize={30} 
@@ -86,6 +86,7 @@ function App() {
                 marginRight="auto"
               />
             </HStack>
+
             {/* Блок с информацией */}
             <HStack>
               <Text
@@ -103,6 +104,7 @@ function App() {
                 📲 Тут ты найдешь все мои ссылки в социальных сетях!
               </Text>
             </HStack>
+
             {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
               {links.map(link => (
@@ -140,35 +142,7 @@ function App() {
                 </a>
               ))}
             </List>
-            {/* Страница с гаджетами */}
-            <HStack
-              w="25em" 
-              h="3em" 
-              borderRadius="lg"
-              boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
-              bgColor="rgba(255,255,255,0.7)"
-              p="1em"
-              marginY="1em"
-              as={motion.div}
-              variants={chieldElement}
-              whileHover={{scale: 1.1}}
-              whileTap={{scale: 0.9}}
-            >
-              <Link to="/mydevice" style={{ textDecoration: 'none' }}>
-                  <Text 
-                    as={AiFillCode} 
-                    color="gray.900" 
-                    fontSize={30} 
-                  />
-                  <Text
-                    color="gray.900"
-                    fontSize={20} 
-                    fontWeight="bold"
-                  >
-                    {info.gadjets}
-                  </Text>
-              </Link>
-            </HStack>
+
           </VStack>
         </Grid>
       </Box>
