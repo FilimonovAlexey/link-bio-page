@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 
 //Подключение иконок
-import {AiFillCode, AiFillGithub, AiFillCheckCircle} from 'react-icons/ai';
+import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube} from 'react-icons/ai';
 import {FaTelegram} from "react-icons/fa"
 
 //Подключение анимаций
@@ -22,6 +22,7 @@ function App() {
 
   //Ссылки на социальные сети и их логотипы
   const links = [
+    {url: "https://www.youtube.com/@tehno.maniak", icon: AiFillYoutube, text: "YouTube канал"},
     {url: "https://filimonov-blog.ru/", icon: AiFillCode, text: "Мой Сайт"},
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Telegram група"},
