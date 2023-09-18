@@ -49,7 +49,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
+        <Grid minH="100vh" p={3} bgGradient="linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%)">
           <VStack marginTop="2em">
 
             {/* логотип */}
