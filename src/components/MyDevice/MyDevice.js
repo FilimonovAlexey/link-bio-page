@@ -15,7 +15,8 @@ import {
   CardFooter,
   Stack,
   Heading,
-  Button
+  Button,
+  Link
  } from '@chakra-ui/react';
 
 function MyDevice() {
@@ -26,12 +27,14 @@ function MyDevice() {
         <Grid minH="100vh" p={3} bgGradient="linear(to-b, purple.200, purple.700)">
           <VStack marginTop="2em">
             {/* логотип */}
-            <Image 
-              src="./LogoDevice.png"
-              w="15em"
-              boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
-              borderRadius="10%"
-            />
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Image 
+                src="./LogoDevice.png"
+                w="15em"
+                boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
+                borderRadius="10%"
+              />
+            </Link>
 
             {/* название */}
             <Text 
