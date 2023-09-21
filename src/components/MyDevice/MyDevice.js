@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { 
   ChakraProvider, 
   Box, 
@@ -15,8 +16,7 @@ import {
   CardFooter,
   Stack,
   Heading,
-  Button,
-  Link
+  Button
  } from '@chakra-ui/react';
 
 function MyDevice() {
