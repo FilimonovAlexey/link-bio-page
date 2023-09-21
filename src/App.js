@@ -9,7 +9,8 @@ import {
   Image,
   List,
   HStack,
-  Button
+  Button,
+  Flex
 } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 
@@ -127,20 +128,19 @@ function App() {
             </HStack>
 
             {/* Блок с ссылками на мои соц сети */}
-            <HStack
-              w="10em" 
-              h="3em" 
+            <Flex
+              w="3em" 
+              h="3em"
+              marginY="1em"
               borderRadius="lg"
               p="1em"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                margin: 'auto',
-              }}
               as={motion.div}
               initial={{x: "-50px"}}
               animate={{x: "0px"}}
               transition="linear 0.1s"
+              justifyContent="center"
+              margin="auto"
+              gap="10px"
             >
               <Link target="_blank" to={socialLink.vk}>
                 <Button 
@@ -198,7 +198,7 @@ function App() {
                 data-popup-direction="top"
               >
               </div>
-            </HStack>
+            </Flex>
 
             {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
