@@ -8,7 +8,8 @@ import {
   theme,
   Image,
   List,
-  HStack
+  HStack,
+  Button
 } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 
@@ -115,6 +116,33 @@ function App() {
                 🎥 Владелец <b>YouTube канала: Техноманьяк.</b> <br /> 
                 📲 Тут ты найдешь все мои ссылки в социальных сетях!
               </Text>
+            </HStack>
+
+            {/* Блок с ссылками на мои соц сети */}
+            <HStack
+              w="25em" 
+              h="3em" 
+              borderRadius="lg"
+              p="1em"
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                margin: 'auto',
+              }}            
+              as={motion.div}
+              variants={chieldElement}
+              whileHover={{scale: 1.1}}
+              whileTap={{scale: 0.9}}
+            >
+              <Button colorScheme='facebook' leftIcon={<FaTelegram />}>
+                VK
+              </Button>
+              <Button colorScheme='telegram' leftIcon={<FaTelegram />}>
+                Telegram
+              </Button>
+              <Button colorScheme='red' leftIcon={<FaTelegram />}>
+                Instagram
+              </Button>
             </HStack>
 
             {/* Блок с ссылками */}
