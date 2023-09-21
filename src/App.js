@@ -28,8 +28,14 @@ function App() {
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Группа Telegram"},
     {url: "https://boosty.to/tehnomaniak", icon: AiFillDollarCircle, text: "Поддержать канал"},
-    {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
   ]
+
+    //Ссылки на доп. материалы
+    const devlinks = [
+      {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
+      {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Полезные материалы для Программиста"},
+      {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
+    ]
 
   //Название страницы
   const info = {
@@ -108,6 +114,44 @@ function App() {
             {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
               {links.map(link => (
+                <a href={link.url}>
+                  <HStack 
+                    w="25em" 
+                    h="3em" 
+                    borderRadius="lg"
+                    boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
+                    bgColor="rgba(255,255,255,0.7)"
+                    p="1em"
+                    marginY="1em"
+                    as={motion.div}
+                    variants={chieldElement}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                  >
+                    <Text 
+                      as={link.icon} 
+                      color="gray.900" 
+                      fontSize={30} 
+                      marginRight="auto"
+                    />
+                    <Text 
+                      color="gray.900"
+                      fontSize={20} 
+                      fontWeight="bold"
+                      marginRight="auto"
+                      p="1em"
+                      marginY="1em"
+                    >
+                        {link.text}
+                    </Text>
+                  </HStack>
+                </a>
+              ))}
+            </List>
+
+            {/* Блок с доп ссылками */}
+            <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
+              {devlinks.map(link => (
                 <a href={link.url}>
                   <HStack 
                     w="25em" 
