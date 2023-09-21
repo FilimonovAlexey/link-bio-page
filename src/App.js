@@ -37,10 +37,16 @@ function App() {
       {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
     ]
 
-  //Название страницы
-  const info = {
-    name: "@Техноманьяк",
-  }
+    //Название страницы
+    const info = {
+      name: "@Техноманьяк",
+    }
+
+    // Настройка цвета страницы
+    const color = {
+      colorTheme: "linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%)",
+      colorButton: "rgba(255,255,255,0.7)"
+    }
 
   const parentContainer = {
     hidden: {opacity: 0},
@@ -55,7 +61,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3} bgGradient="linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%)">
+        <Grid minH="100vh" p={3} bgGradient={color.colorTheme}>
           <VStack marginTop="2em">
 
             {/* логотип */}
@@ -120,7 +126,7 @@ function App() {
                     h="3em" 
                     borderRadius="lg"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
-                    bgColor="rgba(255,255,255,0.7)"
+                    bgColor={color.colorButton}
                     p="1em"
                     marginY="1em"
                     as={motion.div}
