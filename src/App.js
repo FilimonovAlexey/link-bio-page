@@ -132,7 +132,7 @@ function App() {
               w="3em" 
               h="3em"
               borderRadius="lg"
-              p="25px"
+              p="1em"
               as={motion.div}
               initial={{x: "-50px"}}
               animate={{x: "0px"}}
@@ -209,7 +209,7 @@ function App() {
                     borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor={color.colorButton}
-                    p="25px"
+                    p="1em"
                     marginY="1em"
                     as={motion.div}
                     variants={chieldElement}
@@ -247,7 +247,7 @@ function App() {
                     borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor="rgba(255,255,255,0.7)"
-                    p="25px"
+                    p="1em"
                     marginY="1em"
                     as={motion.div}
                     variants={chieldElement}
