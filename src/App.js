@@ -195,7 +195,7 @@ function App() {
                   <HStack 
                     w="25em" 
                     h="3em" 
-                    borderRadius="lg"
+                    borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor={color.colorButton}
                     p="1em"
@@ -233,7 +233,7 @@ function App() {
                   <HStack 
                     w="25em" 
                     h="3em" 
-                    borderRadius="lg"
+                    borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor="rgba(255,255,255,0.7)"
                     p="1em"
