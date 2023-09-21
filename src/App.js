@@ -14,8 +14,8 @@ import {
 import { Link } from "react-router-dom";
 
 //Подключение иконок
-import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube, AiFillDollarCircle, AiFillCustomerService} from 'react-icons/ai';
-import {FaTelegram} from "react-icons/fa"
+import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube, AiFillDollarCircle, AiFillCustomerService, AiFillInstagram} from 'react-icons/ai';
+import {FaTelegram, FaLinkedin, FaVk} from "react-icons/fa"
 
 //Подключение анимаций
 import { motion } from 'framer-motion';
@@ -134,15 +134,22 @@ function App() {
               whileHover={{scale: 1.1}}
               whileTap={{scale: 0.9}}
             >
-              <Button colorScheme='facebook' leftIcon={<FaTelegram />}>
-                VK
-              </Button>
+              <Link to="https://vk.com/f1ll_zzz">
+                <Button colorScheme='facebook' leftIcon={<FaVk />}>
+                  VK
+                </Button>
+              </Link>
               <Button colorScheme='telegram' leftIcon={<FaTelegram />}>
                 Telegram
               </Button>
-              <Button colorScheme='red' leftIcon={<FaTelegram />}>
-                Instagram
-              </Button>
+                <Button colorScheme='red' leftIcon={<AiFillInstagram />}>
+                  Instagram
+                </Button>
+              <Link to="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%84%D0%B8%D0%BB%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2-2a0b07257/">
+                <Button colorScheme='linkedin' leftIcon={<FaLinkedin />}>
+                  linkedin
+                </Button>
+              </Link>
             </HStack>
 
             {/* Блок с ссылками */}
