@@ -33,9 +33,9 @@ function App() {
 
     //Ссылки на доп. материалы
     const devlinks = [
-      {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
       {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Полезные материалы для Программиста"},
       {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
+      {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
     ]
 
     //Название страницы
