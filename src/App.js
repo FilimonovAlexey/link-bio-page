@@ -209,7 +209,7 @@ function App() {
                     borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor={color.colorButton}
-                    p="1em"
+                    p="25px"
                     marginY="1em"
                     as={motion.div}
                     variants={chieldElement}
@@ -247,7 +247,7 @@ function App() {
                     borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor="rgba(255,255,255,0.7)"
-                    p="1em"
+                    p="25px"
                     marginY="1em"
                     as={motion.div}
                     variants={chieldElement}
