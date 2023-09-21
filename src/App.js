@@ -131,9 +131,8 @@ function App() {
             <Flex
               w="3em" 
               h="3em"
-              marginY="1em"
               borderRadius="lg"
-              p="1em"
+              p="25px"
               as={motion.div}
               initial={{x: "-50px"}}
               animate={{x: "0px"}}
