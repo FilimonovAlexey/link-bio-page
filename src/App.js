@@ -128,7 +128,7 @@ function App() {
 
             {/* Блок с ссылками на мои соц сети */}
             <HStack
-              w="25em" 
+              w="10em" 
               h="3em" 
               borderRadius="lg"
               p="1em"
