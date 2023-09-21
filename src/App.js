@@ -49,6 +49,14 @@ function App() {
       colorButton: "rgba(255,255,255,0.7)"
     }
 
+    // Ссылки на личные социальные сети
+    const socialLink = {
+      vk:"https://vk.com/f1ll_zzz",
+      telegram:"https://t.me/f1llzzz",
+      instagram:"https://www.instagram.com/filimonovalexey/",
+      linkedin:"https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%84%D0%B8%D0%BB%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2-2a0b07257/",
+    }
+
   const parentContainer = {
     hidden: {opacity: 0},
     show: {opacity: 1, transition: {staggerChildren: 0.15}},
@@ -128,25 +136,53 @@ function App() {
                 display: 'flex',
                 justifyContent: 'center',
                 margin: 'auto',
-              }}            
+              }}
               as={motion.div}
-              variants={chieldElement}
-              whileHover={{scale: 1.1}}
-              whileTap={{scale: 0.9}}
+              initial={{x: "-50px"}}
+              animate={{x: "0px"}}
+              transition="linear 0.1s"
             >
-              <Link to="https://vk.com/f1ll_zzz">
-                <Button colorScheme='facebook' leftIcon={<FaVk />}>
+              <Link target="_blank" to={socialLink.vk}>
+                <Button 
+                  colorScheme='facebook' 
+                  leftIcon={<FaVk />}
+                  as={motion.div}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+                >
                   VK
                 </Button>
               </Link>
-              <Button colorScheme='telegram' leftIcon={<FaTelegram />}>
-                Telegram
-              </Button>
-                <Button colorScheme='red' leftIcon={<AiFillInstagram />}>
+              <Link target="_blank" to={socialLink.telegram}>
+                <Button 
+                  colorScheme='telegram' 
+                  leftIcon={<FaTelegram />}
+                  as={motion.div}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+                >
+                  Telegram
+                </Button>
+              </Link>
+              <Link target="_blank" to={socialLink.instagram}>
+                <Button 
+                  colorScheme='red' 
+                  leftIcon={<AiFillInstagram />}
+                  as={motion.div}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+                >
                   Instagram
                 </Button>
-              <Link to="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%84%D0%B8%D0%BB%D0%B8%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2-2a0b07257/">
-                <Button colorScheme='linkedin' leftIcon={<FaLinkedin />}>
+              </Link>
+              <Link target="_blank" to={socialLink.linkedin}>
+                <Button 
+                  colorScheme='linkedin' 
+                  leftIcon={<FaLinkedin />}
+                  as={motion.div}
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
+                >
                   linkedin
                 </Button>
               </Link>
