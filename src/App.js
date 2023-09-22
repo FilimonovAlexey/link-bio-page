@@ -128,76 +128,78 @@ function App() {
             </HStack>
 
             {/* Блок с ссылками на мои соц сети */}
-            <Flex
-              w="3em" 
-              h="3em"
-              borderRadius="lg"
-              p="1em"
-              as={motion.div}
-              initial={{x: "-50px"}}
-              animate={{x: "0px"}}
-              transition="linear 0.1s"
-              justifyContent="center"
-              margin="auto"
-              gap="10px"
-            >
-              <Link target="_blank" to={socialLink.vk}>
-                <Button 
-                  colorScheme='facebook' 
-                  leftIcon={<FaVk />}
-                  as={motion.div}
-                  whileHover={{scale: 1.1}}
-                  whileTap={{scale: 0.9}}
-                >
-                  VK
-                </Button>
-              </Link>
-              <Link target="_blank" to={socialLink.telegram}>
-                <Button 
-                  colorScheme='telegram' 
-                  leftIcon={<FaTelegram />}
-                  as={motion.div}
-                  whileHover={{scale: 1.1}}
-                  whileTap={{scale: 0.9}}
-                >
-                  Telegram
-                </Button>
-              </Link>
-              <Link target="_blank" to={socialLink.instagram}>
-                <Button 
-                  colorScheme='red' 
-                  leftIcon={<AiFillInstagram />}
-                  as={motion.div}
-                  whileHover={{scale: 1.1}}
-                  whileTap={{scale: 0.9}}
-                >
-                  Instagram
-                </Button>
-              </Link>
-              <Link target="_blank" to={socialLink.linkedin}>
-                <Button 
-                  colorScheme='linkedin' 
-                  leftIcon={<FaLinkedin />}
-                  as={motion.div}
-                  whileHover={{scale: 1.1}}
-                  whileTap={{scale: 0.9}}
-                >
-                  linkedin
-                </Button>
-              </Link>
-
-              {/* Кнопка поделиться */}
-              {/* Сервис Яндекса для настройки - https://yandex.ru/dev/share/ */}
-              <div class="ya-share2"
-                data-curtain data-shape="round" 
-                data-color-scheme="blackwhite" 
-                data-limit="0" 
-                data-more-button-type="short" 
-                data-services="vkontakte,telegram,whatsapp,linkedin"
-                data-popup-direction="top"
+            <HStack>
+              <Flex
+                w="3em" 
+                h="3em"
+                borderRadius="lg"
+                p="1em"
+                as={motion.div}
+                initial={{x: "-50px"}}
+                animate={{x: "0px"}}
+                transition="linear 0.1s"
+                justifyContent="center"
+                margin="auto"
+                gap="10px"
               >
-              </div>
-            </Flex>
+                <Link target="_blank" to={socialLink.vk}>
+                  <Button 
+                    colorScheme='facebook' 
+                    leftIcon={<FaVk />}
+                    as={motion.div}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                  >
+                    VK
+                  </Button>
+                </Link>
+                <Link target="_blank" to={socialLink.telegram}>
+                  <Button 
+                    colorScheme='telegram' 
+                    leftIcon={<FaTelegram />}
+                    as={motion.div}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                  >
+                    Telegram
+                  </Button>
+                </Link>
+                <Link target="_blank" to={socialLink.instagram}>
+                  <Button 
+                    colorScheme='red' 
+                    leftIcon={<AiFillInstagram />}
+                    as={motion.div}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                  >
+                    Instagram
+                  </Button>
+                </Link>
+                <Link target="_blank" to={socialLink.linkedin}>
+                  <Button 
+                    colorScheme='linkedin' 
+                    leftIcon={<FaLinkedin />}
+                    as={motion.div}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                  >
+                    linkedin
+                  </Button>
+                </Link>
+
+                {/* Кнопка поделиться */}
+                {/* Сервис Яндекса для настройки - https://yandex.ru/dev/share/ */}
+                <div class="ya-share2"
+                  data-curtain data-shape="round" 
+                  data-color-scheme="blackwhite" 
+                  data-limit="0" 
+                  data-more-button-type="short" 
+                  data-services="vkontakte,telegram,whatsapp,linkedin"
+                  data-popup-direction="top"
+                >
+                </div>
+              </Flex>
+            </HStack>
 
             {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
