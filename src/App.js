@@ -47,7 +47,7 @@ function App() {
     // Настройка цвета страницы
     const color = {
       colorTheme: "linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%)",
-      colorButton: "rgba(255,255,255,0.7)"
+      colorButton: "rgba(255,255,255)"
     }
 
     // Ссылки на личные социальные сети
@@ -247,7 +247,7 @@ function App() {
                     h="3em" 
                     borderRadius="25px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
-                    bgColor="rgba(255,255,255,0.7)"
+                    bgColor={color.colorButton}
                     p="1em"
                     marginY="1em"
                     as={motion.div}
