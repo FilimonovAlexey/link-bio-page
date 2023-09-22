@@ -15,8 +15,19 @@ import {
 import { Link } from "react-router-dom";
 
 //Подключение иконок
-import {AiFillCode, AiFillGithub, AiFillCheckCircle, AiFillYoutube, AiFillDollarCircle, AiFillCustomerService, AiFillInstagram} from 'react-icons/ai';
-import {FaTelegram, FaLinkedin, FaVk} from "react-icons/fa"
+import {AiFillGithub, 
+  AiFillCheckCircle, 
+  AiFillYoutube, 
+  AiFillDollarCircle, 
+  AiFillCustomerService, 
+  AiFillInstagram,
+} from 'react-icons/ai';
+
+import {FaTelegram, 
+  FaLinkedin, 
+  FaVk, 
+  FaGlobe,
+} from "react-icons/fa"
 
 //Подключение анимаций
 import { motion } from 'framer-motion';
@@ -26,7 +37,7 @@ function App() {
   //Ссылки на социальные сети и их логотипы
   const links = [
     {url: "https://www.youtube.com/@tehno.maniak", icon: AiFillYoutube, text: "YouTube канал"},
-    {url: "https://filimonov-blog.ru/", icon: AiFillCode, text: "Мой Сайт"},
+    {url: "https://filimonov-blog.ru/", icon: FaGlobe, text: "Мой Сайт"},
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Группа Telegram"},
     {url: "https://boosty.to/tehnomaniak", icon: AiFillDollarCircle, text: "Поддержать канал"},
