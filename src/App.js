@@ -190,8 +190,7 @@ function App() {
                 {/* Кнопка поделиться */}
                 {/* Сервис Яндекса для настройки - https://yandex.ru/dev/share/ */}
                 <div class="ya-share2"
-                  data-curtain data-shape="round" 
-                  data-color-scheme="blackwhite" 
+                  data-shape="round"
                   data-limit="0" 
                   data-more-button-type="short" 
                   data-services="vkontakte,telegram,whatsapp,linkedin"
