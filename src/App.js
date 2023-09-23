@@ -48,6 +48,8 @@ function App() {
       {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Полезные материалы для Программиста"},
       {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
       {url: "/mydevice", icon: AiFillCustomerService, text: "Мои девайсы"},
+      {url: "https://youtu.be/3G1-r8uqbnc?si=Vd67S5T9zDGR9Xc9", icon: AiFillCustomerService, text: "Настрой свой VPN"},
+      {url: "https://youtu.be/2K69fwmCGQc?si=g__lQ-WLCZ00eapF", icon: AiFillCustomerService, text: "Telegram бот с chatGPT"},
     ]
 
     //Название страницы
