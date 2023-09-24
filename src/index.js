@@ -3,7 +3,8 @@ import { StrictMode } from 'react';
 import { ColorModeScript } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
-import MyDevice from "./components/MyDevice/MyDevice";
+// Подключение доп страницы
+// import MyDevice from "./components/MyDevice/MyDevice";
 
 ReactDOM.render(
   <StrictMode>
@@ -11,7 +12,8 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/mydevice" element={<MyDevice />} />
+        {/* Роут на доп.страницу */}
+        {/* <Route path="/mydevice" element={<MyDevice />} /> */}
       </Routes>
     </Router>
   </StrictMode>,
