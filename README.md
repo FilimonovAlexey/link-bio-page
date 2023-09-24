@@ -10,21 +10,21 @@
 
 ## Запуск проекта:
 * Склонировать проект на ваш компьютер с Github с помощью команды:
-
-`git clone https://github.com/FilimonovAlexey/link-bio-page.git`
+```
+git clone https://github.com/FilimonovAlexey/link-bio-page.git
+```
 
 * Установить зависимости с помощью команды:
-
-`npm install`
-
+```
+npm install
+```
 * Запустить проект с помощью команды:
-
-`npm run start`
+```
+npm run start
+```
 
 ## Настройка проекта
 
-* Для отображения иконок в проекте используется библиотека **React Icons**.
-
-[Ссылка на документацию **React Icons**.](https://react-icons.github.io/react-icons)
+* Для отображения иконок в проекте используется библиотека **React Icons**. [Ссылка на документацию **React Icons**.](https://react-icons.github.io/react-icons)
 
 * Кнопка Поделиться создана с помощью готового решения от Яндекс, для ее кастомизации перейдите доступен конструктор на [Сайте Яндекса](https://yandex.ru/dev/share/), а также [документация](https://yandex.ru/dev/share/doc/ru/).
