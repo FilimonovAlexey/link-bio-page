@@ -3,6 +3,7 @@
 Страница со всеми социальными сетями, является аналогом таких сервисов как: **linktr**, **milkshake**, **Taplink** и многих других.
 
 ## Технологии
+![ChakraUI](https://img.shields.io/badge/-chakraUI-61daf8?logo=chakraUI&logoColor=black)
 ![React](https://img.shields.io/badge/-React-61daf8?logo=react&logoColor=black)
 ![HTML5](https://img.shields.io/badge/-HTML5-e34f26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572b6?logo=css3&logoColor=white)
@@ -35,3 +36,5 @@ npm run start
 * Для отображения иконок в проекте используется библиотека **React Icons**. [Ссылка на документацию **React Icons**.](https://react-icons.github.io/react-icons)
 
 * Кнопка Поделиться создана с помощью готового решения от Яндекс, для ее кастомизации перейдите доступен конструктор на [Сайте Яндекса](https://yandex.ru/dev/share/), а также [документация](https://yandex.ru/dev/share/doc/ru/).
+
+* Анимации сделаны с использованием библиотеки: Motion. [Ссылка на документацию](https://www.framer.com/motion/introduction/)
