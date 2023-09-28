@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   ChakraProvider,
   Box,
@@ -10,16 +10,21 @@ import {
   List,
   HStack,
   Button,
-  Flex
+  Flex,
+  Skeleton, 
+  SkeletonCircle, 
+  SkeletonText
 } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
+
+//Подключение анимаций
+import { motion } from 'framer-motion';
 
 //Подключение иконок
 import {AiFillGithub, 
   AiFillCheckCircle, 
   AiFillYoutube, 
-  AiFillDollarCircle, 
-  AiFillCustomerService, 
+  AiFillDollarCircle,
   AiFillInstagram,
 } from 'react-icons/ai';
 
@@ -29,9 +34,6 @@ import {FaTelegram,
   FaGlobe,
   FaYoutube
 } from "react-icons/fa"
-
-//Подключение анимаций
-import { motion } from 'framer-motion';
 
 function App() {
 
@@ -81,6 +83,29 @@ function App() {
     show: {opacity: 1, x: "0px"}
   }
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/');
+      if (response.ok) {
+        const data = await response.json();
+        setData(data);
+        setIsLoading(false);
+      } else {
+        throw new Error('Ошибка получения данных');
+      }
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
@@ -99,17 +124,21 @@ function App() {
 
             {/* логотип */}
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <Image 
-                src="./Logo.png"
-                w="6em"
-                borderRadius="50%"
-                border="2px solid white"
-                boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
-                as={motion.img}
-                initial={{scale: 0}}
-                animate={{scale: 1}}
-                transition="linear 0.1s"
-              />
+            {isLoading ? (
+                <SkeletonCircle size="24" />
+              ) : (
+                <Image 
+                  src="./Logo.png"
+                  w="6em"
+                  borderRadius="50%"
+                  border="2px solid white"
+                  boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
+                  as={motion.img}
+                  initial={{scale: 0}}
+                  animate={{scale: 1}}
+                  transition="linear 0.1s"
+                />
+              )}
             </Link>
 
             {/* Блок с названием */}
