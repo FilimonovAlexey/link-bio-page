@@ -137,6 +137,7 @@ function App() {
               <Text
                 color="white"
                 fontSize={20}
+                fontWeight="bold"
                 w="30em" 
                 h="4em"
                 as={motion.div}
@@ -144,8 +145,8 @@ function App() {
                 animate={{x: "0px"}}
                 transition="linear 0.1s"
               >
-                👨🏻‍💻 Начинающий <b>Frontend разработчик.</b> <br /> 
-                🎥 Владелец <b>YouTube канала: Техноманьяк.</b> <br /> 
+                👨🏻‍💻 Начинающий Frontend разработчик. <br /> 
+                🎥 Владелец YouTube канала: Техноманьяк. <br /> 
                 📲 Тут ты найдешь все мои ссылки в социальных сетях!
               </Text>
             </HStack>
