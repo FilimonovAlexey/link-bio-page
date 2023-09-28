@@ -125,7 +125,7 @@ function App() {
             {/* логотип */}
             <Link to="/" style={{ textDecoration: 'none' }}>
             {isLoading ? (
-                <SkeletonCircle size="24" />
+                <SkeletonCircle size="6em" />
               ) : (
                 <Image 
                   src="./Logo.png"
@@ -148,19 +148,28 @@ function App() {
               animate={{x: "0px"}}
               transition="linear 0.1s"
             >
-              <Text
-                fontSize={30} 
-                fontWeight="bold"
-                color="white"
-              >
-                {info.name}
-              </Text>
-              <Text 
-                as={AiFillCheckCircle} 
-                color="rgba(3, 177, 252)" 
-                fontSize={30} 
-                marginRight="auto"
-              />
+              {isLoading ? (
+                <>
+                  <SkeletonText noOfLines={1} width="80px" />
+                  <Skeleton height="30px" width="30px" borderRadius="50%" />
+                </>
+              ) : (
+                <>
+                  <Text
+                    fontSize={30} 
+                    fontWeight="bold"
+                    color="white"
+                  >
+                    {info.name}
+                  </Text>
+                  <Text 
+                    as={AiFillCheckCircle} 
+                    color="rgba(3, 177, 252)" 
+                    fontSize={30} 
+                    marginRight="auto"
+                  />
+                </>
+              )}
             </HStack>
 
             {/* Блок с информацией */}
