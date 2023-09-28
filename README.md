@@ -12,9 +12,7 @@
 
 ![](./public/Preview.png)
 
-Проект написан с использованием библиотеки компонентов для **React** - **Chakra UI**.
-
-[Ссылка на документацию Chakra UI.](https://chakra-ui.com/getting-started)
+Проект написан с использованием библиотеки компонентов для **React** - **Chakra UI**. [Ссылка на документацию Chakra UI.](https://chakra-ui.com/getting-started)
 
 ## Запуск проекта:
 * Склонировать проект на ваш компьютер с Github с помощью команды:
