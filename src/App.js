@@ -102,6 +102,7 @@ function App() {
                 src="./Logo.png"
                 w="6em"
                 borderRadius="50%"
+                border="2px solid white"
                 boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
                 as={motion.img}
                 initial={{scale: 0}}
