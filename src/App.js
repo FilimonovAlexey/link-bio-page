@@ -83,7 +83,17 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" minW="30.6em" p={3} bgGradient={color.colorTheme}>
+        <Grid 
+          minH="100vh" 
+          minW="30.6em" 
+          p={3} 
+          // bgGradient={color.colorTheme}
+          sx={{
+            backgroundImage: "url('./background.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          >
           <VStack marginTop="2em">
 
             {/* логотип */}
@@ -110,6 +120,7 @@ function App() {
               <Text
                 fontSize={30} 
                 fontWeight="bold"
+                color="white"
               >
                 {info.name}
               </Text>
@@ -124,7 +135,7 @@ function App() {
             {/* Блок с информацией */}
             <HStack>
               <Text
-                color="gray.900"
+                color="white"
                 fontSize={20}
                 w="30em" 
                 h="4em"
@@ -198,17 +209,6 @@ function App() {
                     linkedin
                   </Button>
                 </Link>
-
-                {/* Кнопка поделиться */}
-                {/* Сервис Яндекса для настройки - https://yandex.ru/dev/share/ */}
-                <div class="ya-share2"
-                  data-shape="round"
-                  data-limit="0" 
-                  data-more-button-type="short" 
-                  data-services="vkontakte,telegram,whatsapp,linkedin"
-                  data-popup-direction="top"
-                >
-                </div>
               </Flex>
             </HStack>
 
