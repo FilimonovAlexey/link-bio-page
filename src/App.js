@@ -174,83 +174,91 @@ function App() {
 
             {/* Блок с информацией */}
             <HStack>
-              <Text
-                color="white"
-                fontSize={20}
-                fontWeight="bold"
-                w="30em" 
-                h="4em"
-                as={motion.div}
-                initial={{x: "-50px"}}
-                animate={{x: "0px"}}
-                transition="linear 0.1s"
-              >
-                👨🏻‍💻 Начинающий Frontend разработчик. <br /> 
-                🎥 Владелец YouTube канала: Техноманьяк. <br /> 
-                📲 Тут ты найдешь все мои ссылки в социальных сетях!
-              </Text>
+            {isLoading ? (
+                <SkeletonText noOfLines={1} width="80px" />
+              ) : (
+                <Text
+                  color="white"
+                  fontSize={20}
+                  fontWeight="bold"
+                  w="30em" 
+                  h="4em"
+                  as={motion.div}
+                  initial={{x: "-50px"}}
+                  animate={{x: "0px"}}
+                  transition="linear 0.1s"
+                >
+                  👨🏻‍💻 Начинающий Frontend разработчик. <br /> 
+                  🎥 Владелец YouTube канала: Техноманьяк. <br /> 
+                  📲 Тут ты найдешь все мои ссылки в социальных сетях!
+                </Text>
+              )}
             </HStack>
 
             {/* Блок с ссылками на мои соц сети */}
             <HStack>
-              <Flex
-                w="3em" 
-                h="3em"
-                borderRadius="lg"
-                p="1em"
-                as={motion.div}
-                initial={{x: "-50px"}}
-                animate={{x: "0px"}}
-                transition="linear 0.1s"
-                justifyContent="center"
-                margin="auto"
-                gap="10px"
-              >
-                <Link target="_blank" to={socialLink.vk}>
-                  <Button 
-                    colorScheme='facebook' 
-                    leftIcon={<FaVk />}
-                    as={motion.div}
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                  >
-                    VK
-                  </Button>
-                </Link>
-                <Link target="_blank" to={socialLink.telegram}>
-                  <Button 
-                    colorScheme='telegram' 
-                    leftIcon={<FaTelegram />}
-                    as={motion.div}
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                  >
-                    Telegram
-                  </Button>
-                </Link>
-                <Link target="_blank" to={socialLink.instagram}>
-                  <Button 
-                    colorScheme='red' 
-                    leftIcon={<AiFillInstagram />}
-                    as={motion.div}
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                  >
-                    Instagram
-                  </Button>
-                </Link>
-                <Link target="_blank" to={socialLink.linkedin}>
-                  <Button 
-                    colorScheme='linkedin' 
-                    leftIcon={<FaLinkedin />}
-                    as={motion.div}
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                  >
-                    linkedin
-                  </Button>
-                </Link>
-              </Flex>
+            {isLoading ? (
+                <SkeletonText noOfLines={1} width="80px" />
+              ) : (
+                <Flex
+                  w="3em" 
+                  h="3em"
+                  borderRadius="lg"
+                  p="1em"
+                  as={motion.div}
+                  initial={{x: "-50px"}}
+                  animate={{x: "0px"}}
+                  transition="linear 0.1s"
+                  justifyContent="center"
+                  margin="auto"
+                  gap="10px"
+                >
+                  <Link target="_blank" to={socialLink.vk}>
+                    <Button 
+                      colorScheme='facebook' 
+                      leftIcon={<FaVk />}
+                      as={motion.div}
+                      whileHover={{scale: 1.1}}
+                      whileTap={{scale: 0.9}}
+                    >
+                      VK
+                    </Button>
+                  </Link>
+                  <Link target="_blank" to={socialLink.telegram}>
+                    <Button 
+                      colorScheme='telegram' 
+                      leftIcon={<FaTelegram />}
+                      as={motion.div}
+                      whileHover={{scale: 1.1}}
+                      whileTap={{scale: 0.9}}
+                    >
+                      Telegram
+                    </Button>
+                  </Link>
+                  <Link target="_blank" to={socialLink.instagram}>
+                    <Button 
+                      colorScheme='red' 
+                      leftIcon={<AiFillInstagram />}
+                      as={motion.div}
+                      whileHover={{scale: 1.1}}
+                      whileTap={{scale: 0.9}}
+                    >
+                      Instagram
+                    </Button>
+                  </Link>
+                  <Link target="_blank" to={socialLink.linkedin}>
+                    <Button 
+                      colorScheme='linkedin' 
+                      leftIcon={<FaLinkedin />}
+                      as={motion.div}
+                      whileHover={{scale: 1.1}}
+                      whileTap={{scale: 0.9}}
+                    >
+                      linkedin
+                    </Button>
+                  </Link>
+                </Flex>
+              )}
             </HStack>
 
             {/* Блок с ссылками */}
