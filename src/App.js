@@ -150,7 +150,7 @@ function App() {
             >
               {isLoading ? (
                 <>
-                  <SkeletonText noOfLines={1} width="80px" />
+                  <SkeletonText noOfLines={1} width="10em" skeletonHeight='10'/>
                   <Skeleton height="30px" width="30px" borderRadius="50%" />
                 </>
               ) : (
@@ -175,7 +175,7 @@ function App() {
             {/* Блок с информацией */}
             <HStack>
             {isLoading ? (
-                <SkeletonText noOfLines={1} width="80px" />
+                <SkeletonText noOfLines={1} width="12em" skeletonHeight='20'/>
               ) : (
                 <Text
                   color="white"
@@ -198,7 +198,7 @@ function App() {
             {/* Блок с ссылками на мои соц сети */}
             <HStack>
             {isLoading ? (
-                <SkeletonText noOfLines={1} width="80px" />
+                <SkeletonText noOfLines={1} width="18em" skeletonHeight='12'/>
               ) : (
                 <Flex
                   w="3em" 
