@@ -118,6 +118,8 @@ function App() {
             backgroundImage: "url('./background.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundBlendMode:"soft-light"
           }}
           >
           <VStack marginTop="2em">
