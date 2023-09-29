@@ -279,6 +279,9 @@ function App() {
                     variants={chieldElement}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
+                    _hover={{ // добавляем стили для hover состояния
+                      boxShadow:"12px 14px 14px 0px rgba(161, 9, 234, 0.39)"
+                    }}
                   >
                     <Text 
                       as={link.icon} 
