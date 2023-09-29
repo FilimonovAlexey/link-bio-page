@@ -48,7 +48,7 @@ function App() {
 
     //Ссылки на доп. материалы
     const devlinks = [
-      {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Полезные материалы для Программиста"},
+      {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Awesome dev"},
       {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
       {url: "https://youtu.be/3G1-r8uqbnc?si=Vd67S5T9zDGR9Xc9", icon: FaYoutube, text: "Настрой свой VPN"},
       {url: "https://youtu.be/2K69fwmCGQc?si=g__lQ-WLCZ00eapF", icon: FaYoutube, text: "Telegram бот с chatGPT"},
@@ -110,8 +110,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid 
-          minH="100vh" 
-          minW="30.6em" 
+          minH="100vh"
           p={3} 
           // bgGradient={color.colorTheme}
           sx={{
@@ -131,7 +130,7 @@ function App() {
               ) : (
                 <Image 
                   src="./Logo.png"
-                  w="6em"
+                  w="8em"
                   borderRadius="50%"
                   border="2px solid white"
                   boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
@@ -174,36 +173,13 @@ function App() {
               )}
             </HStack>
 
-            {/* Блок с информацией */}
-            <HStack>
-            {isLoading ? (
-                <SkeletonText noOfLines={1} width="12em" skeletonHeight='20'/>
-              ) : (
-                <Text
-                  color="white"
-                  fontSize={20}
-                  fontWeight="bold"
-                  w="30em" 
-                  h="4em"
-                  as={motion.div}
-                  initial={{x: "-50px"}}
-                  animate={{x: "0px"}}
-                  transition="linear 0.1s"
-                >
-                  👨🏻‍💻 Начинающий Frontend разработчик. <br /> 
-                  🎥 Владелец YouTube канала: Техноманьяк. <br /> 
-                  📲 Тут ты найдешь все мои ссылки в социальных сетях!
-                </Text>
-              )}
-            </HStack>
-
             {/* Блок с ссылками на мои соц сети */}
             <HStack>
             {isLoading ? (
                 <SkeletonText noOfLines={1} width="18em" skeletonHeight='12'/>
               ) : (
                 <Flex
-                  w="3em" 
+                  w="2em" 
                   h="3em"
                   borderRadius="lg"
                   p="1em"
@@ -248,17 +224,6 @@ function App() {
                       Instagram
                     </Button>
                   </Link>
-                  <Link target="_blank" to={socialLink.linkedin}>
-                    <Button 
-                      colorScheme='linkedin' 
-                      leftIcon={<FaLinkedin />}
-                      as={motion.div}
-                      whileHover={{scale: 1.1}}
-                      whileTap={{scale: 0.9}}
-                    >
-                      linkedin
-                    </Button>
-                  </Link>
                 </Flex>
               )}
             </HStack>
@@ -268,29 +233,31 @@ function App() {
               {links.map(link => (
                 <a href={link.url}>
                   <HStack 
-                    w="25em" 
+                    w="15em" 
                     h="3em" 
-                    borderRadius="25px"
+                    borderRadius="12px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
                     bgColor={color.colorButton}
                     p="1em"
                     marginY="1em"
+                    color="gray.900"
                     as={motion.div}
                     variants={chieldElement}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     _hover={{ // добавляем стили для hover состояния
-                      boxShadow:"12px 14px 14px 0px rgba(161, 9, 234, 0.39)"
+                      boxShadow:"12px 14px 14px 0px rgba(156, 38, 184, 0.84)",
+                      color:"rgba(156, 38, 184, 0.84)"
                     }}
                   >
                     <Text 
                       as={link.icon} 
-                      color="gray.900" 
+                      
                       fontSize={30} 
                       marginRight="auto"
                     />
                     <Text 
-                      color="gray.900"
+                      
                       fontSize={20} 
                       fontWeight="bold"
                       marginRight="auto"
@@ -309,13 +276,18 @@ function App() {
               {devlinks.map(link => (
                 <a href={link.url}>
                   <HStack 
-                    w="25em" 
+                    w="15em" 
                     h="3em" 
-                    borderRadius="25px"
+                    borderRadius="12px"
                     boxShadow="10px 5px 5px rgba(0,0,0,0.5)"
+                    color="gray.900"
                     bgColor={color.colorButton}
                     p="1em"
                     marginY="1em"
+                    _hover={{ // добавляем стили для hover состояния
+                      boxShadow:"12px 14px 14px 0px rgba(156, 38, 184, 0.84)",
+                      color:"rgba(156, 38, 184, 0.84)"
+                    }}
                     as={motion.div}
                     variants={chieldElement}
                     whileHover={{scale: 1.1}}
@@ -323,12 +295,10 @@ function App() {
                   >
                     <Text 
                       as={link.icon} 
-                      color="gray.900" 
                       fontSize={30} 
                       marginRight="auto"
                     />
-                    <Text 
-                      color="gray.900"
+                    <Text
                       fontSize={20} 
                       fontWeight="bold"
                       marginRight="auto"
