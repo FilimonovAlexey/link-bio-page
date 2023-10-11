@@ -265,8 +265,8 @@ function App() {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     _hover={{ // добавляем стили для hover состояния
-                      boxShadow:"12px 14px 14px 0px rgba(156, 38, 184, 0.84)",
-                      color:"rgba(156, 38, 184, 0.84)"
+                      boxShadow:"12px 14px 14px 0px rgba(188,19,254)",
+                      color:"rgba(188,19,254)"
                     }}
                   >
                     <Text 
