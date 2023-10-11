@@ -13,8 +13,11 @@ import {
   Flex,
   Skeleton, 
   SkeletonCircle, 
-  SkeletonText
+  SkeletonText,
+  ButtonGroup,
+  IconButton
 } from '@chakra-ui/react';
+import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 //Подключение анимаций
@@ -174,59 +177,56 @@ function App() {
             </HStack>
 
             {/* Блок с ссылками на мои соц сети */}
-            <HStack>
-            {isLoading ? (
-                <SkeletonText noOfLines={1} width="18em" skeletonHeight='12'/>
+            <ButtonGroup variant='solid' spacing='3'>
+              {isLoading ? (
+                <>
+                  <Skeleton width="12" height="12" />
+                  <Skeleton width="12" height="12" />
+                  <Skeleton width="12" height="12" />
+                  <Skeleton width="12" height="12" />
+                </>
               ) : (
-                <Flex
-                  w="2em" 
-                  h="3em"
-                  borderRadius="lg"
-                  p="1em"
-                  as={motion.div}
-                  initial={{x: "-50px"}}
-                  animate={{x: "0px"}}
-                  transition="linear 0.1s"
-                  justifyContent="center"
-                  margin="auto"
-                  gap="10px"
-                >
-                  <Link target="_blank" to={socialLink.vk}>
-                    <Button 
-                      colorScheme='facebook' 
-                      leftIcon={<FaVk />}
+                <>
+                  <ChakraLink href={socialLink.vk} target="_blank">
+                    <IconButton
+                      colorScheme='blue'
+                      icon={<FaVk />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
-                    >
-                      VK
-                    </Button>
-                  </Link>
-                  <Link target="_blank" to={socialLink.telegram}>
-                    <Button 
-                      colorScheme='telegram' 
-                      leftIcon={<FaTelegram />}
+                    />
+                  </ChakraLink>
+                  <ChakraLink href={socialLink.telegram} target="_blank">
+                    <IconButton
+                      colorScheme='blue'
+                      icon={<FaTelegram />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
-                    >
-                      Telegram
-                    </Button>
-                  </Link>
-                  <Link target="_blank" to={socialLink.instagram}>
-                    <Button 
-                      colorScheme='red' 
-                      leftIcon={<AiFillInstagram />}
+                    />
+                  </ChakraLink>
+                  <ChakraLink href={socialLink.instagram} target="_blank">
+                    <IconButton
+                      colorScheme='red'
+                      icon={<AiFillInstagram />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
-                    >
-                      Instagram
-                    </Button>
-                  </Link>
-                </Flex>
+                    />
+                  </ChakraLink>
+                  <ChakraLink href={socialLink.linkedin} target="_blank">
+                    <IconButton
+                      colorScheme='blue'
+                      icon={<FaLinkedin />}
+                      as={motion.div}
+                      whileHover={{scale: 1.1}}
+                      whileTap={{scale: 0.9}}
+                    />
+                  </ChakraLink>
+                </>
               )}
-            </HStack>
+            </ButtonGroup>
+
 
             {/* Блок с ссылками */}
             <List as={motion.ul} variants={parentContainer} initial="hidden" animate="show">
