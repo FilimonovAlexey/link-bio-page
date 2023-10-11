@@ -177,7 +177,7 @@ function App() {
             </HStack>
 
             {/* Блок с ссылками на мои соц сети */}
-            <ButtonGroup variant='solid' spacing='3'>
+            <ButtonGroup variant='solid' spacing='3' size='lg'>
               {isLoading ? (
                 <>
                   <Skeleton width="12" height="12" />
