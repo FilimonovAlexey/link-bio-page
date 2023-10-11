@@ -114,8 +114,7 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid 
           minH="100vh"
-          p={3} 
-          // bgGradient={color.colorTheme}
+          p={3}
           sx={{
             backgroundImage: "url('./background.png')",
             backgroundSize: "cover",
