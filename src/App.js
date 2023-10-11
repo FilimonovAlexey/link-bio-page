@@ -133,9 +133,9 @@ function App() {
               ) : (
                 <Image 
                   src="./Logo.png"
-                  w="8em"
+                  w="9em"
                   borderRadius="50%"
-                  border="2px solid white"
+                  border="3px solid white"
                   boxShadow="0px 0px 30px rgba(0,0,0,0.5)"
                   as={motion.img}
                   initial={{scale: 0}}
