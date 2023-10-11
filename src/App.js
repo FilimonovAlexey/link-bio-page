@@ -140,6 +140,8 @@ function App() {
                   initial={{scale: 0}}
                   animate={{scale: 1}}
                   transition="linear 0.1s"
+                  whileHover={{scale: 1.1}}
+                  whileTap={{scale: 0.9}}
                 />
               )}
             </Link>
