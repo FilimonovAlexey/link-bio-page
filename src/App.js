@@ -132,6 +132,7 @@ function App() {
               ) : (
                 <Image 
                   src="./Logo.png"
+                  alt="Логотип канала Техноманьяк"
                   w="9em"
                   borderRadius="50%"
                   border="3px solid white"
