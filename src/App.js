@@ -189,38 +189,58 @@ function App() {
                 <>
                   <ChakraLink href={socialLink.vk} target="_blank">
                     <IconButton
-                      colorScheme='blue'
+                      bgColor={color.colorButton}
+                      color="gray.900"
                       icon={<FaVk />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
+                      _hover={{ // добавляем стили для hover состояния
+                        boxShadow:"3px 3px 3px 0px rgba(188,19,254)",
+                        color:"rgba(188,19,254)"
+                      }}
                     />
                   </ChakraLink>
                   <ChakraLink href={socialLink.telegram} target="_blank">
                     <IconButton
-                      colorScheme='blue'
+                      bgColor={color.colorButton}
+                      color="gray.900"
                       icon={<FaTelegram />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
+                      _hover={{ // добавляем стили для hover состояния
+                        boxShadow:"3px 3px 3px 0px rgba(188,19,254)",
+                        color:"rgba(188,19,254)"
+                      }}
                     />
                   </ChakraLink>
                   <ChakraLink href={socialLink.instagram} target="_blank">
                     <IconButton
-                      colorScheme='red'
+                      bgColor={color.colorButton}
+                      color="gray.900"
                       icon={<AiFillInstagram />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
+                      _hover={{ // добавляем стили для hover состояния
+                        boxShadow:"3px 3px 3px 0px rgba(188,19,254)",
+                        color:"rgba(188,19,254)"
+                      }}
                     />
                   </ChakraLink>
                   <ChakraLink href={socialLink.linkedin} target="_blank">
                     <IconButton
-                      colorScheme='blue'
+                      bgColor={color.colorButton}
+                      color="gray.900"
                       icon={<FaLinkedin />}
                       as={motion.div}
                       whileHover={{scale: 1.1}}
                       whileTap={{scale: 0.9}}
+                      _hover={{ // добавляем стили для hover состояния
+                        boxShadow:"3px 3px 3px 0px rgba(188,19,254)",
+                        color:"rgba(188,19,254)"
+                      }}
                     />
                   </ChakraLink>
                 </>
