@@ -9,8 +9,6 @@ import {
   Image,
   List,
   HStack,
-  Button,
-  Flex,
   Skeleton, 
   SkeletonCircle, 
   SkeletonText,
