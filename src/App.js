@@ -33,7 +33,7 @@ import {FaTelegram,
   FaLinkedin, 
   FaVk, 
   FaGlobe,
-  FaYoutube
+  FaYoutube,
 } from "react-icons/fa"
 
 function App() {
@@ -45,6 +45,9 @@ function App() {
     {url: "https://github.com/FilimonovAlexey", icon: AiFillGithub, text: "Мой GitHub"},
     {url: "https://t.me/tehnomaniak07", icon: FaTelegram, text: "Группа Telegram"},
     {url: "https://boosty.to/tehnomaniak", icon: AiFillDollarCircle, text: "Поддержать канал"},
+    {url: "https://dzen.ru/filimonov-blog.ru", icon: FaGlobe, text: "ДЗЕН"},
+    {url: "https://rutube.ru/channel/25225888/", icon: FaGlobe, text: "Rutube"},
+    {url: "https://www.tiktok.com/@texno_maniak", icon: FaGlobe, text: "TikTok"},
   ]
 
     //Ссылки на доп. материалы
