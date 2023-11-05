@@ -12,7 +12,7 @@
 
 ![](./public/Preview.png)
 
-https://youtu.be/l1lHN-G0kgg
+https://youtu.be/l1lHN-G0kgg - Видеоурок по созданию Приложения!
 
 Проект написан с использованием библиотеки компонентов для **React** - **Chakra UI**. [Ссылка на документацию Chakra UI.](https://chakra-ui.com/getting-started)
 
