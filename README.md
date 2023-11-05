@@ -12,6 +12,8 @@
 
 ![](./public/Preview.png)
 
+https://youtu.be/l1lHN-G0kgg
+
 Проект написан с использованием библиотеки компонентов для **React** - **Chakra UI**. [Ссылка на документацию Chakra UI.](https://chakra-ui.com/getting-started)
 
 ## Запуск проекта:
