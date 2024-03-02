@@ -54,7 +54,6 @@ function App() {
     const devlinks = [
       {url: "https://github.com/FilimonovAlexey/awesome-frontend-dev", icon: AiFillGithub, text: "Awesome dev"},
       {url: "https://github.com/FilimonovAlexey/school21", icon: AiFillGithub, text: "Подготовка к Школе 21"},
-      {url: "https://youtu.be/3G1-r8uqbnc?si=Vd67S5T9zDGR9Xc9", icon: FaYoutube, text: "Настрой свой VPN"},
       {url: "https://youtu.be/2K69fwmCGQc?si=g__lQ-WLCZ00eapF", icon: FaYoutube, text: "Telegram бот с chatGPT"},
     ]
 
